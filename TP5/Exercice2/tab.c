@@ -22,7 +22,8 @@ int incrementArraySize(TABLEAU* tab, int incrementValue) {
 	}
 	else {
 		int* tmp = tab->elt; // sauvegarde du pointeur actuel
-		tab->elt = (int*)realloc((*tab).elt, sizeof(int) * (tab->size  + incrementValue));
+		int var = tab->size + incrementValue;  //on caste la valeur de la somme pour éviter un dépassement
+		tab->elt = (int*)realloc((*tab).elt, sizeof(int) * (var));
 		if (tab->elt == NULL) { // échec de la réallocation
 			tab->elt = tmp;    // restitution du pointeur précédent
 			return(-1);         // Cela permet d'éviter que la valeur de tab soit modifiée si le realloc ne fonctionne pas 
@@ -100,7 +101,8 @@ int deleteElements(TABLEAU* tab, int startPos, int endPos) {
 			*(tab->elt + startPos - 1 +i) = *(tab->elt + startPos - 1 + nbElementsSuppr+i); // on decale les valeurs de nbElementsSuppr vers la gauche
 		}
 		int* tmp = tab->elt; // sauvegarde du pointeur actuel
-		tab->elt = (int*)realloc((*tab).elt, sizeof(int) * (tab->size - nbElementsSuppr));
+		int var = tab->size - nbElementsSuppr;
+		tab->elt = (int*)realloc((*tab).elt, sizeof(int) * (var));
 		if (tab->elt == NULL) { // échec de la réallocation
 			tab->elt = tmp;     // restitution du pointeur précédent
 			return(-1);         // Cela permet d'éviter que la valeur de tab soit modifiée si le realloc ne fonctionne pas 
