@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tab.h"
-#define TAILLEAJOUT 5;
+#define TAILLEAJOUT 5
 
 
 
@@ -43,9 +43,9 @@ int* ajouterElementDansTableau(int* tab, int* size, int* nbElts, int element) {
 		}
 		else {
 			printf(" \n Plus de place");
-			int ajout = TAILLEAJOUT;
+			int var = TAILLEAJOUT + *size;
 			int* tmp = tab; //on sauvegarde le pointeur en cas d'échec de la réalloc
-			tab = (int*) realloc(tab, (*size + ajout ) * (sizeof(int)));
+			tab = (int*) realloc(tab, (var) * (sizeof(int)));
 			if (tab != NULL) { // On vérifie que la realloc a marché, si oui on peut déplacer tab à l'adresse prévue et modifier les différents compteurs
 			                      // Cela  permet de ne pas modifier la valeur de tab si la realoc n'a pas fonctionné
 				*size = *size + TAILLEAJOUT;
@@ -60,4 +60,5 @@ int* ajouterElementDansTableau(int* tab, int* size, int* nbElts, int element) {
 			}
 		}
 	}
+	return(NULL);
 }
