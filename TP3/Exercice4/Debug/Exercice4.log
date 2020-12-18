@@ -1,0 +1,8 @@
+﻿  main.c
+C:\Users\Pirlouit\source\repos\TPC3\Exercice4\main.c(12,30): warning C4244: '-=' : conversion de 'double' en 'unsigned __int64', perte possible de données
+C:\Users\Pirlouit\source\repos\TPC3\Exercice4\main.c(27,20): warning C4244: '-=' : conversion de 'double' en 'unsigned int', perte possible de données
+C:\Users\Pirlouit\source\repos\TPC3\Exercice4\main.c(32,39): warning C4244: '-=' : conversion de 'double' en 'unsigned int', perte possible de données
+C:\Users\Pirlouit\source\repos\TPC3\Exercice4\main.c(35,56): warning C4244: '-=' : conversion de 'double' en 'unsigned int', perte possible de données
+C:\Users\Pirlouit\source\repos\TPC3\Exercice4\main.c(56,46): warning C4244: '=' : conversion de 'unsigned __int64' en 'unsigned int', perte possible de données
+C:\Users\Pirlouit\source\repos\TPC3\Exercice4\main.c(7,1): warning C4244: 'initialisation' : conversion de 'double' en 'unsigned __int64', perte possible de données
+  Exercice4.vcxproj -> C:\Users\Pirlouit\source\repos\TPC3\Debug\Exercice4.exe

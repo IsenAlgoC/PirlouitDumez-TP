@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\Pirlouit\source\repos\TPC3\Exercice3\main.c(23,22): warning C4013: 'toupper' non défini(e) ; extern retournant int pris par défaut
+C:\Users\Pirlouit\source\repos\TPC3\Exercice3\main.c(9,113): warning C4101: 'tri' : variable locale non référencée
+  Exercice3.vcxproj -> C:\Users\Pirlouit\source\repos\TPC3\Debug\Exercice3.exe
