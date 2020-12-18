@@ -158,20 +158,7 @@ void affichage_enreg_frmt(Enregistrement enr)
 bool est_sup(Enregistrement enr1, Enregistrement enr2)
 {
 	// code à compléter ici
-	int i = 0;  //Version " a la main " sans utiliser strcmp
-	/*while (enr1.nom[i] == enr2.nom[i]) {    //tant que les deux lettres sont égales
-		i++;
-		if (i >= MAX_NOM) {                 // si les deux noms sont identiques, on considere que le enr1 n'est pas sup à enr2
-			return(false);
-		}
-	}
-	if (enr1.nom[i] < enr2.nom[i]) {        //si la lettre a l'indice i de nom1 est avant celle de nom2, on return false
-			return(false);
-		}
-		else {
-			return(true);    // sinon nom1 est avant nom 2
-		}
- */
+	int i = 0; 
 	if (strcmp(enr1.nom, enr2.nom) > 0) {  //si le premier nom est avant le deuxieme dans l'ordre alphabetique on renvoie true
 		return true;
 	}
@@ -265,9 +252,6 @@ int rechercher_nom(Repertoire *rep, char nom[], int ind)
 							// ajouter code ici pour Liste
 	ind_fin = rep->liste->size;
 	SingleLinkedListElem* tmp = rep->liste->head;
-	for (int i = 0; i < ind; i++) {
-		tmp = tmp->next;
-	}
 	strcpy_s(tmp_nom, MAX_NOM * sizeof(char), nom);
 	for (unsigned i = 0; i < strlen(tmp_nom); i++) {   // on met en majuscule le nom a chercher 
 		tmp_nom[i] = toupper(tmp_nom[i]);
